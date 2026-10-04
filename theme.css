@@ -1,0 +1,482 @@
+/*
+============================================================
+ FOGGY SAGE GLASS — Obsidian Theme
+============================================================
+*/
+
+.theme-light {
+    /* ========================================================
+       BASE
+    ======================================================== */
+
+    --background-primary: #b8d0be;
+    --background-primary-alt: #c4d8c9;
+    --background-secondary: #aec7b5;
+    --background-secondary-alt: #a6c0ad;
+
+    --background-modifier-border: #8fa997;
+    --background-modifier-border-hover: #6f9079;
+    --background-modifier-hover: #9fbaaa;
+    --background-modifier-active-hover: #8fa997;
+
+    --background-modifier-form-field: #c9dbce;
+
+    /* ========================================================
+       TEXT
+    ======================================================== */
+
+    --text-normal: #101710;
+    --text-muted: #53635a;
+    --text-faint: #718078;
+
+    --text-accent: #385842;
+    --text-accent-hover: #52745d;
+
+    --text-on-accent: #ffffff;
+
+    --text-selection: #6f9079;
+
+    /* ========================================================
+       HEADINGS
+    ======================================================== */
+
+    --h1-color: #182019;
+    --h2-color: #385842;
+    --h3-color: #52745d;
+    --h4-color: #557b78;
+    --h5-color: #756276;
+    --h6-color: #53635a;
+
+    --h1-size: 2em;
+    --h2-size: 1.6em;
+    --h3-size: 1.3em;
+
+    /* ========================================================
+       LINKS
+    ======================================================== */
+
+    --link-color: #385842;
+    --link-color-hover: #52745d;
+    --link-decoration: none;
+    --link-decoration-hover: underline;
+
+    --link-external-color: #385842;
+
+    /* ========================================================
+       TAGS
+    ======================================================== */
+
+    --tag-color: #385842;
+    --tag-background: #9fbaaa;
+    --tag-border-color: #8fa997;
+
+    /* ========================================================
+       CODE
+    ======================================================== */
+
+    --code-background: #a9c3af;
+    --code-normal: #182019;
+
+    --code-comment: #53635a;
+    --code-function: #52745d;
+    --code-important: #817d50;
+    --code-keyword: #756276;
+    --code-property: #526f78;
+    --code-string: #557b78;
+    --code-value: #a94f48;
+
+    /* ========================================================
+       CHECKBOXES
+    ======================================================== */
+
+    --checkbox-color: #52745d;
+    --checkbox-color-hover: #70997b;
+    --checkbox-border-color: #53635a;
+
+    /* ========================================================
+       ACCENTS
+    ======================================================== */
+
+    --interactive-accent: #52745d;
+    --interactive-accent-hover: #70997b;
+
+    --interactive-normal: #c4d8c9;
+    --interactive-hover: #9fbaaa;
+
+    /* ========================================================
+       CALLOUTS
+    ======================================================== */
+
+    --callout-padding: 12px;
+    --callout-radius: 8px;
+
+    /* ========================================================
+       SCROLLBARS
+    ======================================================== */
+
+    --scrollbar-bg: transparent;
+    --scrollbar-thumb-bg: #8fa997;
+    --scrollbar-active-thumb-bg: #6f9079;
+
+    /* ========================================================
+       DIVIDERS
+    ======================================================== */
+
+    --divider-color: #8fa997;
+
+    /* ========================================================
+       FONTS
+    ======================================================== */
+
+    --font-text:
+        "JetBrainsMono Nerd Font",
+        monospace;
+
+    --font-interface:
+        "JetBrainsMono Nerd Font",
+        monospace;
+
+    --font-monospace:
+        "JetBrainsMono Nerd Font",
+        monospace;
+}
+
+
+/* ============================================================
+   GLOBAL
+============================================================ */
+
+body {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    color: #101710;
+}
+
+
+/* ============================================================
+   EDITOR
+============================================================ */
+
+.markdown-source-view,
+.markdown-preview-view {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    color: #101710;
+}
+
+
+/* ============================================================
+   EDITOR BACKGROUND
+============================================================ */
+
+.workspace,
+.workspace-tab-container,
+.workspace-tab-header-container {
+    background: transparent;
+}
+
+.workspace-leaf {
+    background: rgba(184, 208, 190, 0.65);
+}
+
+
+/* ============================================================
+   GLASS EFFECT
+============================================================ */
+
+.workspace-split.mod-root .workspace-leaf,
+.workspace-tab-container {
+    background: rgba(184, 208, 190, 0.55);
+    backdrop-filter: blur(18px);
+    -webkit-backdrop-filter: blur(18px);
+}
+
+
+/* ============================================================
+   SIDEBAR
+============================================================ */
+
+.mod-left-split,
+.mod-right-split {
+    background: rgba(174, 199, 181, 0.60);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.nav-file-title,
+.nav-folder-title {
+    color: #182019;
+    border-radius: 6px;
+}
+
+.nav-file-title:hover,
+.nav-folder-title:hover {
+    background: rgba(111, 144, 121, 0.18);
+}
+
+.nav-file-title.is-active {
+    background: rgba(82, 116, 93, 0.20);
+    color: #182019;
+}
+
+
+/* ============================================================
+   TABS
+============================================================ */
+
+.workspace-tab-header {
+    background: transparent;
+    color: #53635a;
+}
+
+.workspace-tab-header.is-active {
+    color: #101710;
+}
+
+.workspace-tab-header-inner:hover {
+    background: rgba(111, 144, 121, 0.15);
+}
+
+
+/* ============================================================
+   HEADINGS
+============================================================ */
+
+.markdown-rendered h1,
+.markdown-rendered h2,
+.markdown-rendered h3,
+.markdown-rendered h4,
+.markdown-rendered h5,
+.markdown-rendered h6 {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+    font-weight: 700;
+}
+
+.markdown-rendered h1 {
+    color: #182019;
+}
+
+.markdown-rendered h2 {
+    color: #385842;
+}
+
+.markdown-rendered h3 {
+    color: #52745d;
+}
+
+
+/* ============================================================
+   LINKS
+============================================================ */
+
+.markdown-rendered a,
+.cm-hmd-internal-link,
+.cm-link {
+    color: #385842;
+}
+
+.markdown-rendered a:hover,
+.cm-hmd-internal-link:hover {
+    color: #70997b;
+}
+
+
+/* ============================================================
+   CODE BLOCKS
+============================================================ */
+
+.markdown-rendered pre {
+    background: rgba(169, 195, 175, 0.72);
+    border: 1px solid rgba(83, 99, 90, 0.25);
+    border-radius: 8px;
+    padding: 14px;
+}
+
+.markdown-rendered code {
+    font-family: "JetBrainsMono Nerd Font", monospace;
+}
+
+
+/* ============================================================
+   INLINE CODE
+============================================================ */
+
+.markdown-rendered :not(pre) > code {
+    background: rgba(159, 186, 170, 0.55);
+    color: #385842;
+    border-radius: 4px;
+    padding: 2px 5px;
+}
+
+
+/* ============================================================
+   BLOCKQUOTES
+============================================================ */
+
+.markdown-rendered blockquote {
+    border-left: 3px solid #52745d;
+    background: rgba(159, 186, 170, 0.25);
+    color: #53635a;
+    border-radius: 0 6px 6px 0;
+}
+
+
+/* ============================================================
+   HORIZONTAL RULE
+============================================================ */
+
+.markdown-rendered hr {
+    border-color: #8fa997;
+}
+
+
+/* ============================================================
+   CHECKBOXES
+============================================================ */
+
+.task-list-item-checkbox {
+    appearance: none;
+    width: 15px;
+    height: 15px;
+
+    border: 1px solid #53635a;
+    border-radius: 4px;
+
+    background: transparent;
+}
+
+.task-list-item-checkbox:checked {
+    background: #52745d;
+    border-color: #52745d;
+}
+
+.task-list-item-checkbox:checked::after {
+    color: #ffffff;
+}
+
+
+/* ============================================================
+   TAGS
+============================================================ */
+
+.tag {
+    background: rgba(111, 144, 121, 0.20);
+    color: #385842;
+    border: 1px solid rgba(83, 116, 93, 0.25);
+    border-radius: 999px;
+    padding: 2px 7px;
+}
+
+
+/* ============================================================
+   CALLOUTS
+============================================================ */
+
+.callout {
+    background: rgba(159, 186, 170, 0.25);
+    border: 1px solid rgba(83, 116, 93, 0.20);
+}
+
+
+/* ============================================================
+   SEARCH
+============================================================ */
+
+.search-result-file-title {
+    color: #385842;
+}
+
+.search-result-file-matched-text {
+    color: #101710;
+}
+
+
+/* ============================================================
+   MODALS
+============================================================ */
+
+.modal-container {
+    background: rgba(184, 208, 190, 0.85);
+    backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(20px);
+}
+
+.modal {
+    background: rgba(196, 216, 201, 0.90);
+    border: 1px solid rgba(83, 99, 90, 0.20);
+    border-radius: 10px;
+}
+
+
+/* ============================================================
+   COMMAND PALETTE
+============================================================ */
+
+.prompt {
+    background: rgba(196, 216, 201, 0.95);
+    border: 1px solid #8fa997;
+    border-radius: 10px;
+}
+
+.suggestion-item.is-selected {
+    background: rgba(82, 116, 93, 0.20);
+    color: #182019;
+}
+
+
+/* ============================================================
+   CURSOR
+============================================================ */
+
+.cm-cursor {
+    border-left: 2px solid #111812;
+}
+
+.cm-focused .cm-cursor {
+    border-left-color: #111812;
+}
+
+
+/* ============================================================
+   SELECTION
+============================================================ */
+
+::selection {
+    background: #6f9079;
+    color: #ffffff;
+}
+
+.cm-selectionBackground {
+    background: rgba(111, 144, 121, 0.45) !important;
+}
+
+
+/* ============================================================
+   STATUS BAR
+============================================================ */
+
+.status-bar {
+    background: rgba(174, 199, 181, 0.55);
+    color: #53635a;
+    border-top: 1px solid rgba(83, 99, 90, 0.15);
+}
+
+
+/* ============================================================
+   SCROLLBAR
+============================================================ */
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #8fa997;
+    border-radius: 999px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6f9079;
+}
